@@ -1,13 +1,12 @@
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './app.css'
+import './App.css'
 import Header from "./Header"
 import Subscribe from "./Subscribe";
 import Login from "./Login";
 import Home from "./Home";
 import Footer from "./Footer"
 import {Search} from "./Search";
-import New from "./New";
 import Movies from "./Movies";
 
 

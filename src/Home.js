@@ -1,9 +1,7 @@
 import React from 'react'
 import Banner from './Banner'
 import Row from './Row'
-import "./app.css"
 import data from './data'
-//import Trending from './Trendingdata'
 export default function Home() {
 
   return (
@@ -11,10 +9,9 @@ export default function Home() {
     
     <div> <Banner/></div>
    
-    {/* <img src={data["Trending"][0].link}/> */}
           
           
-           <Row title={"Trending"} movie={data["Trending"]}/>
+          <Row title={"Trending"} movie={data["Trending"]}/>
           <Row title={"Popular"} movie={data["Popular"]}/>
           <Row title={"Horror"} movie={data["Horror"]}/>
           <Row title={"Thriller"} movie={data["Thriller"]}/>

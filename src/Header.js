@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import {FaGlobe} from "react-icons/fa";
 import {IoMdArrowDropdown,IoMdArrowDropup} from "react-icons/io";
 import { useState,useEffect } from "react";
-import "./app.css"
 import {FaSistrix} from 'react-icons/fa'
 
 import React from 'react'
