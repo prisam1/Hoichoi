@@ -51,8 +51,8 @@ export default function BannerImage({arr}) {
   return (
   <>
     <div style={outerBanner}>
-        <div style={leftArrow} onClick={()=>{const isfirst=currIndex==0;isfirst?setIndex(arr.length-1):setIndex(currIndex-1)}}>{<RxChevronLeft/>}</div>
-        <div style={righttArrow} onClick={()=>{const lastIndex=currIndex==arr.length-1;lastIndex?setIndex(0):setIndex(currIndex+1)}}>{<RxChevronRight/>}</div>
+        <div style={leftArrow} onClick={()=>{const isfirst=currIndex===0;isfirst?setIndex(arr.length-1):setIndex(currIndex-1)}}>{<RxChevronLeft/>}</div>
+        <div style={righttArrow} onClick={()=>{const lastIndex=currIndex===arr.length-1;lastIndex?setIndex(0):setIndex(currIndex+1)}}>{<RxChevronRight/>}</div>
     <div style={bannerimg}></div>
    
     </div>
