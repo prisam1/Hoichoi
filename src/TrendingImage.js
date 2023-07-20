@@ -1,7 +1,5 @@
 import React from 'react'
 import {useState} from 'react'
-import { RxChevronRight,RxChevronLeft } from "react-icons/rx";
-
 
 export default function TrendingImage({movie}) {
     const [currIndex,setIndex]=useState(0)
