@@ -1,27 +1,31 @@
 import React, { useState } from 'react'
-import data from './data.js'
+import data from './data'
 
-export const Search = () => {
-const [userInput,setUser]=useState("")
+export default function Search() {
+  const [userInput,setInput]=useState("")
 
-var result=data["Trending"].filter(item=>{item.name.includes(userInput)})
-
-
-
-
-  return (
-    <div className='sposter'>
-        <form>
-            <input type= "search" className='searchbar' placeholder='Search here...' value={userInput} onChange={(e)=>{
-     setUser(e.target.value)
-            }}></input>
-            
-        </form>
-
-        
-
-        <img src={result[0].link}/>
+ function item(val){
+    return (
+      <> 
+      <div> <img src={val.link} alt="search"/>
+      <p>{val.name}</p></div>
+       
+      </>
+     
+    )
+    
+ }
+return (
+    <div className='searchDiv'>
+      <form className='form'>
+        <input className='searchbar' placeholder='Search here...' value={userInput} onChange={(e)=>{
+          setInput(e.target.value)
+        }} ></input>
+      </form>
+      {}
+      
+      <div className='searchpostre'>{userInput&&data["Trending"].filter(x=>x.name.toLowerCase().includes(userInput)).map((item))}</div>
+    
     </div>
   )
 }
-

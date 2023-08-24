@@ -12,12 +12,13 @@ export default function Header() {
   const [HOME,setHome]=useState('HOME')
   const [FREE,setFREE]=useState('FREE')
   const [MOVIES,setMOVIES]=useState('MOVIES')
-  const [SHOWS,setSHOWS]=useState('SHOWS')
-  const [UPCOMING,setUPCOMING]=useState('UPCOMING')
-  const [GIFT,setGIFT]=useState('GIFT')
-  const [OFFERS,setOFFERS]=useState('OFFER')
-  const [LOGIN,setLOGIN]=useState('LOGIN')
-  const [SUBSCRIBE,setSUBSCRIBE]=useState('SUBSCRIBE')
+  const [SHOWS,setShows]=useState('SHOWS')
+  const [UPCOMING,setUpcoming]=useState('UPCOMING')
+  const [GIFT,setGift]=useState('GIFT')
+  const [OFFERS,setOffers]=useState('OFFER')
+  const [LOGIN,setLogin]=useState('LOGIN')
+  const [SIGNUP,setSignUp]=useState('SIGNUP')
+  const [SUBSCRIBE,setSubscribe]=useState('SUBSCRIBE')
   const language={
   
     cursor:"pointer",
@@ -27,23 +28,24 @@ export default function Header() {
    
     
   }
-  useEffect(()=>
-  {
-    languag=='BNG'?setHome('হোম'):setHome('HOME')
-    languag=='BNG'?setFREE('ফ্রি'):setFREE('FREE')
-    languag=='BNG'?setMOVIES('মুভিস'):setMOVIES('MOVIES')
-    languag=='BNG'?setUPCOMING('আপকামিং'):setUPCOMING('UPCOMING')
-    languag=='BNG'?setGIFT('গিফট'):setGIFT('GIFT')
-    languag=='BNG'?setOFFERS('অফারস'):setOFFERS('OFFERS')
-    languag=='BNG'?setLOGIN('লগইন'):setLOGIN('LOGIN')
-    languag=='BNG'?setSHOWS('সিরিজ'):setSHOWS('SHOWS')
-    languag=='BNG'?setSUBSCRIBE('সাবস্ক্রাইব'):setSUBSCRIBE('SUBSCRIBE')
-  })
+ 
+useEffect(() => {
+  setHome(languag === 'BNG' ? 'হোম' : 'HOME');
+  setFREE(languag === 'BNG' ? 'ফ্রি' : 'FREE');
+  setMOVIES(languag === 'BNG' ? 'মুভিস' : 'MOVIES');
+  setUpcoming(languag === 'BNG' ? 'আপকামিং' : 'UPCOMING');
+  setGift(languag === 'BNG' ? 'গিফট' : 'GIFT');
+  setOffers(languag === 'BNG' ? 'অফারস' : 'OFFERS');
+  setLogin(languag === 'BNG' ? 'লগইন' : 'LOGIN');
+  setSignUp(languag === 'BNG' ? 'সাইনআপ' : 'SIGNUP');
+  setShows(languag === 'BNG' ? 'সিরিজ' : 'SHOWS');
+  setSubscribe(languag === 'BNG' ? 'সাবস্ক্রাইব' : 'SUBSCRIBE');
+}, [languag]);
  
   return (
     <nav className="header">
     <h1>
-        Ho!cho!
+        ho!cho!
     </h1>
     
     <main className="main">
@@ -59,14 +61,14 @@ export default function Header() {
         <>
         <div>  
         
-          <a className="button" onClick={()=>{buttons==0?setbutton(1):setbutton(0)}}>
+          <button className="button" onClick={()=>{buttons===0?setbutton(1):setbutton(0)}}>
         <FaGlobe size="1.5rem"/>
         {
-          buttons==0?<IoMdArrowDropdown size="1.5rem"/>:<IoMdArrowDropup size="1.5rem"/>
+          buttons===0?<IoMdArrowDropdown size="1.5rem"/>:<IoMdArrowDropup size="1.5rem"/>
           
         }
-               </a>
-                  {buttons==1 &&<div style={language}>
+               </button>
+                  {buttons===1 &&<div style={language}>
                   <h4 onClick={()=>{setLanguage("ENG")}}>English</h4>
                     <h4 onClick={()=>{setLanguage("BNG")}}>Bengali</h4>
         </div>}
@@ -74,10 +76,10 @@ export default function Header() {
         
         </div>
         <Link className="head" to={"/login"}> {LOGIN} </Link>
+        <Link className="head" to={'/signUp'}>{SIGNUP}</Link>
         <div className="btn">{SUBSCRIBE}</div>
         </>
     </main>
 </nav>
   )
 }
-
