@@ -1,6 +1,5 @@
 import React from 'react'
 import Banner from './Banner'
-import "./app.css"
 import Rows from "./Rows"
 import data from './data'
 

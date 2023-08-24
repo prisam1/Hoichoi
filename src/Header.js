@@ -3,7 +3,7 @@ import {FaGlobe} from "react-icons/fa";
 import {IoMdArrowDropdown,IoMdArrowDropup} from "react-icons/io";
 import { useState,useEffect } from "react";
 import {FaSistrix} from 'react-icons/fa'
-import "./app.css"
+
 import React from 'react'
 
 export default function Header() {
