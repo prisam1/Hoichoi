@@ -14,7 +14,7 @@ import Register from "./Register";
 function App() {
   return (
     <>
-    <Router>
+    <Router> 
     <Header/>
       <Routes>
     <Route path={"/"} element={<Home />}/>
