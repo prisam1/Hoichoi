@@ -1,6 +1,6 @@
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './app.css'
+import '../src/app.css'
 import Header from "./Header"
 import Subscribe from "./Subscribe";
 import Login from "./Login";
