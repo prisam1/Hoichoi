@@ -1,4 +1,6 @@
-In the project directory, you can run:
+
+
+# Deployed Link : 'https://hoichoi--thunderous-fox-a85e19.netlify.app/'
 
 ### `npm start`
 
@@ -7,4 +9,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 
 
-Deployed Link : 'https://hoichoi--thunderous-fox-a85e19.netlify.app/'
